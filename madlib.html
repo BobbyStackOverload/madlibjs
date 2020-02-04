@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Madlib</title>
+</head>
+<body>
+ 
+    <h1>Mad Libs</h1>
+     
+    <ul>
+      <li>Noun: <input type="text" id="nouninput"></li>
+      <li>Adjective: <input type="text" id="adjectiveinput"></li>
+      <li>Adverb: <input type="text" id="adverbinput"></li>
+    </ul>
+     
+    <button id="lib-button" type="button">Lib it!</button>
+      
+    <p>Generated story: <span id="noun">_______________(plural noun)</span>. I thought it was a very
+    <span id="adjective">_______________(adjective)</span> idea. In swimming class,
+        we needed to swim extremely
+        <span id="adverb">_______________(adverb)</span>, or else we would have to
+        swim longer.
+        Before I knew it, school was over. I grabbed all
+        my belongings and put them into my backpack. In two
+        minutes, the bus came. As I stepped into the bus I
+        shouted, "Goodbye, adios amigos, and shalom," to
+        my friends. Then I went into the bus. In a flash, I was
+        back home. This day was an extremely exciting day! 
+    
+    </p>
+ 
+   
+        
+   
+  </body>
+ <script>
+    var myButton = document.getElementById('lib-button');
+    var libIt = function() {
+        var storyDiv = document.getElementById("story");
+        storyDiv.innerHTML = "Your story here";
+    };
+    myButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        myNoun.innerHTML = nouninput.value;
+        myAdjective.innerHTML = adjectiveinput.value;
+        myAdverb.innerHTML = adverbinput.value;
+    });
+
+    var myNoun = document.getElementById("noun");
+    var myAdjective = document.getElementById("adjective");
+    var myAdverb = document.getElementById("adverb");
+
+    var nouninput = document.getElementById("nouninput");
+    var adjectiveinput = document.getElementById("adjectiveinput");
+    var adverbinput = document.getElementById("adverbinput");
+
+    
+    
+    </script>
+
+</html>
